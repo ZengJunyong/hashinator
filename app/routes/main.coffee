@@ -18,6 +18,10 @@ module.exports = (app) ->
         res.send(hash: md5sum.digest('hex'))
 
     # create an SHA256 implementation
+    app.post '/hash/sha256', (req, res) ->
+      sha256sum = crypto.createHash('sha256')
+      sha256sum.update(req.body.input)
+      res.send(hash: sha256sum.digest('hex'))
 
     # create an scrypt implementation w/ N=1024, r=1, p=1
     # salt = "salt"

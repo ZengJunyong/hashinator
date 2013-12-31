@@ -4,7 +4,7 @@
 module.exports = (app) ->
     
     # with app, we declare our routes and the handlers
-    app.get '/', (req, res) ->
+    app.get '/example', (req, res) ->
         res.render 'example'
 
 

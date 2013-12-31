@@ -48,6 +48,7 @@ app.configure ->
 
 # Add routes to the application
 require("./routes/main")(app)
+require("./routes/example")(app)
 
 # Add in custom error handling middleware
 # Express applications require that error handling middleware

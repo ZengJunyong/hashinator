@@ -5,12 +5,18 @@ html
         if typeof(requireJSConfig) != 'undefined'
             script.
                 var require = !{JSON.stringify(requireJSConfig)}
-
+        link(href="/css/test.css",rel="stylesheet")
         script(data-main="/js/main.js", src="/js/require.js")
 
     body
+        p Hello,here is my profile on elance ,click my profile link and will be open in a new window .
+            br
+            a(target='_BLANK', href='http://junyong.elance.com') https://junyong.elance.com
+            br
+            p.prompt I just created an SHA256 implementation , because I'm not very familar with an scrypt implementation w/ N=1024, r=1, p=1 . Could you accept ?
 
         h1 Hashinator
+
 
         | Input:
         input#input(value="Type something")
@@ -24,6 +30,6 @@ html
             dt SHA1
             dd#sha1 --
             dt SHA256
-            dd#sha256 (to be implemented)
+            dd#sha256 --
             dt Scrypt (N:1024, r:1, p:1)
             dd#scrypt (to be implemented)
