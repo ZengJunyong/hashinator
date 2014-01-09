@@ -1,4 +1,5 @@
 crypto = require 'crypto'
+scrypt = require("scrypt")
 makeRequireJSConfig = require '../libs/makeRequireJSconfig'
 
 module.exports = (app) ->
@@ -25,3 +26,12 @@ module.exports = (app) ->
 
     # create an scrypt implementation w/ N=1024, r=1, p=1
     # salt = "salt"
+    app.post '/hash/scrypt', (req, res) ->
+      message = req.body.input
+      password = "salt"
+      maxtime = 1
+      maxmem = 1
+      maxmemfrac = 1024
+      cipher = scrypt.encryptSync(message, password, maxtime, maxmem, maxmemfrac)
+      res.send(hash: cipher)
+

@@ -12,8 +12,6 @@ html
         p Hello,here is my profile on elance ,click my profile link and will be open in a new window .
             br
             a(target='_BLANK', href='http://junyong.elance.com') https://junyong.elance.com
-            br
-            p.prompt I just created an SHA256 implementation , because I'm not very familar with an scrypt implementation w/ N=1024, r=1, p=1 . Could you accept ?
 
         h1 Hashinator
 
@@ -24,12 +22,17 @@ html
             span Get Hashes!
 
         br
-        dl
-            dt MD5
-            dd#md5 --
-            dt SHA1
-            dd#sha1 --
-            dt SHA256
-            dd#sha256 --
-            dt Scrypt (N:1024, r:1, p:1)
-            dd#scrypt (to be implemented)
+
+        table
+            tr
+                td MD5
+                td#md5 --
+            tr
+                td SHA1
+                td#sha1 --
+            tr
+                td SHA256
+                td#sha256 --
+            tr
+                td Scrypt (N:1024, r:1, p:1)
+                td#scrypt --

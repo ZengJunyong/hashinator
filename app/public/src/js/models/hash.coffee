@@ -5,6 +5,7 @@ define [
     "hashers/md5"
     "hashers/sha1"
     "hashers/sha256"
+    "hashers/scrypt"
 ], (
     $
     _
@@ -12,6 +13,7 @@ define [
     md5
     sha1
     sha256
+    scrypt
 ) ->
 
     Backbone.Model.extend
@@ -24,6 +26,7 @@ define [
                 md5 v, (hash) => @set('hash_md5', hash)
                 sha1 v, (hash) => @set('hash_sha1', hash)
                 sha256 v, (hash) => @set('hash_sha256', hash)
+                scrypt v, (hash) => @set('scrypt', hash)
 
 
 

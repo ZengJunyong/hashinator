@@ -7,3 +7,6 @@ app/public/generated/*
 
 # ignore auto-generated docs
 docs
+
+.idea
+~test

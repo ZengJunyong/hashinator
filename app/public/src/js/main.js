@@ -12,6 +12,9 @@
     h.on('change:hash_sha256', function(m, v) {
       return $('#sha256').text(v);
     });
+    h.on('change:scrypt', function(m, v) {
+      return $('#scrypt').text(v);
+    });
     return $('#hashIt').on('click', function() {
       return h.set('input', $('#input').val());
     });
